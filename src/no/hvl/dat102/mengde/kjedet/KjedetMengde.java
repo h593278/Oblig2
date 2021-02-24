@@ -134,6 +134,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		// KjedetMengde other = (KjedetMengde) obj;
 		if (antall != m2.antall) // Antal elementer
 			return false;
+		
 		KjedetIterator<T> iterator = new KjedetIterator<T>(start);
 		// Kjekke om alle elementa er i this.
 		while (iterator.hasNext()) {
@@ -174,7 +175,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 			if (!this.inneholder(element)) { // Kjekke om han alt finnes
 				((KjedetMengde<T>) begge).settInn(element);
 			}
-		}
+		} 
 		return begge;
 	}//
 
